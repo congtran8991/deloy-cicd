@@ -15,7 +15,10 @@ router = APIRouter(prefix="/items", tags=["Items"])
 def list_items(
     skip: int = Query(0, ge=0, description="Number of items to skip"),
     limit: int = Query(
-        DEFAULT_PAGE_SIZE, ge=1, le=MAX_PAGE_SIZE, description="Number of items to return"
+        DEFAULT_PAGE_SIZE,
+        ge=1,
+        le=MAX_PAGE_SIZE,
+        description="Number of items to return",
     ),
     is_active: Optional[bool] = Query(None, description="Filter by active status"),
     db: Session = Depends(get_db),

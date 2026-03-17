@@ -3,7 +3,7 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
-from app.constants.common import TITLE_MAX_LENGTH, DESCRIPTION_MAX_LENGTH
+from app.constants.common import DESCRIPTION_MAX_LENGTH, TITLE_MAX_LENGTH
 
 
 class ItemBase(BaseModel):
