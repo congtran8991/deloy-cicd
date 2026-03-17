@@ -1,10 +1,9 @@
 from typing import Optional
 
 from sqlalchemy.orm import Session
-from fastapi import HTTPException, status
 
-from app.models.item import Item
 from app.api.v1.schemas.item import ItemCreate, ItemUpdate
+from app.models.item import Item
 from app.utils.crud import get_or_404, paginate
 
 

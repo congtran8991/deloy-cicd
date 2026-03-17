@@ -2,10 +2,10 @@
 Generic CRUD utility helpers.
 """
 
-from typing import Any, Optional, Type, TypeVar
+from typing import Optional, Type, TypeVar
 
-from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
+from sqlalchemy.orm import Session
 
 from app.core.database import Base
 
