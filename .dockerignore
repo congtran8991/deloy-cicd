@@ -1,0 +1,17 @@
+__pycache__
+*.pyc
+*.pyo
+.git
+.gitignore
+.env
+.env.example
+venv/
+.venv/
+*.db
+.vscode/
+.idea/
+.github/
+README.md
+Makefile
+*.md
+tests/
