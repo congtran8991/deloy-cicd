@@ -1,7 +1,7 @@
 from typing import Optional
 
 from fastapi import APIRouter, Depends, Query, status
-from sqlalchemy.orm import 
+from sqlalchemy.orm import Session
 
 from app.api.v1.schemas.item import ItemCreate, ItemResponse, ItemUpdate
 from app.constants.common import DEFAULT_PAGE_SIZE, MAX_PAGE_SIZE
