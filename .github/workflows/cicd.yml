@@ -36,29 +36,29 @@ jobs:
       - name: Run Ruff formatter check
         run: ruff format --check app/
 
-  # ─── CI: Test ──────────────────────────────────────────
-  # test:
-  #   name: Test
-  #   runs-on: ubuntu-latest
-  #   needs: lint
-  #   steps:
-  #     - uses: actions/checkout@v4
+  #─── CI: Test ──────────────────────────────────────────
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
 
-  #     - uses: actions/setup-python@v5
-  #       with:
-  #         python-version: "3.12"
-  #         cache: pip
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
 
-  #     - name: Install dependencies
-  #       run: |
-  #         pip install -r requirements.txt
-  #         pip install pytest httpx
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest httpx
 
-  #     - name: Run tests
-  #       run: pytest tests/ -v --tb=short
-  #       env:
-  #         DATABASE_URL: sqlite:///./test.db
-  #         SECRET_KEY: test-secret-key
+      - name: Run tests
+        run: pytest tests/ -v --tb=short
+        env:
+          DATABASE_URL: sqlite:///./test.db
+          SECRET_KEY: test-secret-key
 
   # ─── CD: Build & Push Docker Image ────────────────────
   # build-and-push:
